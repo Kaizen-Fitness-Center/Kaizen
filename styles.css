@@ -1,14 +1,16 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #333;
+    background-color: #6596c0;
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -28,6 +30,7 @@ nav ul li a {
     text-decoration: none;
     padding: 10px 20px;
     display: block;
+    transition: background-color 0.3s;
 }
 
 .tablink {
@@ -35,23 +38,73 @@ nav ul li a {
 }
 
 .tablink:hover {
-    background-color: #555;
+    background-color: #6596c0;
 }
 
 .tabcontent {
     display: none;
     padding: 20px;
     margin: 20px;
-    border-top: 1px solid #ccc;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .active {
-    background-color: #555 !important;
+    background-color: #6596c0 !important;
+}
+
+h1, h2, h3 {
+    color: #6596c0;
 }
 
 footer {
-    background-color: #333;
+    background-color: #6596c0;
     color: white;
     text-align: center;
     padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    color: #6596c0;
+}
+
+form input, form textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d28e56;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #cc5200;
+}
+
+.servicio {
+    margin-bottom: 20px;
+}
+
+.servicio h3 {
+    color: #d28e56;
 }
