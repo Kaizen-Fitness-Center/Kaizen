@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaizen Fitness Center</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Kaizen Fitness Center</h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="tablink" onclick="openTab(event, 'objetivo')">Objetivo Kaizen</a></li>
+                <li><a href="#" class="tablink" onclick="openTab(event, 'entrenamiento')">Entrenamiento</a></li>
+                <li><a href="#" class="tablink" onclick="openTab(event, 'contacto')">¿Entrenamos?</a></li>
+                <li><a href="#" class="tablink" onclick="openTab(event, 'blog')">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="objetivo" class="tabcontent">
+        <h2>Objetivo Kaizen</h2>
+        <p><strong>Misión:</strong> Acompañar al cliente o paciente a alcanzar su mejor versión. La filosofía Kaizen se basa en lograr mejoras constantes y graduales en el proceso a través del entrenamiento.</p>
+        <p><strong>Valores:</strong> Empatía, formación, cercanía, tratamiento personal de todos nuestros clientes y pacientes.</p>
+        <p><strong>Diferenciación:</strong> Nos diferenciamos por el trato con las personas, la facilidad de nuestros entrenadores para sacar lo máximo de cada uno, haciendo el proceso muy divertido y disfrutando.</p>
+        <p><strong>Historia:</strong> El centro nace en octubre de 2021, fundado por Patricia Berciano y Jaime Martínez, amigos y compañeros de estudios desde 2012. Después de años de formación y desarrollo profesional, decidieron lanzar este desafío y crear Kaizen Fitness Center.</p>
+        <p><strong>Fundadores:</strong> Patricia Berciano, ex jugadora de baloncesto profesional y entrenadora personal especializada en baloncesto. Jaime Martínez, especializado en el tratamiento de lesiones y patologías, especialmente lesiones de rodilla, escoliosis y dolor lumbar.</p>
+        <p><strong>Instalaciones:</strong> El centro consta de una sala de entrenamiento, vestuarios y aparcamientos propios. Estamos ubicados en un centro deportivo con 8 pistas de padel, bar y ludoteca.</p>
+    </div>
+
+    <div id="entrenamiento" class="tabcontent">
+        <h2>Entrenamiento</h2>
+        <div class="servicio">
+            <h3>Entrenamiento personal y readaptación de lesiones</h3>
+            <p>Este servicio está dirigido a personas que necesiten tratar una patología y requieran atención 100% durante su proceso, así como a aquellos que prefieren una atención totalmente personalizada sin necesidad de tratar una lesión. Las sesiones son de 1 hora.</p>
+        </div>
+        <div class="servicio">
+            <h3>Entrenamiento en pareja</h3>
+            <p>Este servicio está creado para parejas sentimentales o de amistad que deseen pasar tiempo juntos fuera de su vida diaria. Las sesiones pueden distribuirse de manera igualitaria para ambas personas o tratarse como dos entrenamientos individuales si alguno de los clientes necesita algo más específico. La duración de las sesiones es de 1 hora.</p>
+        </div>
+        <div class="servicio">
+            <h3>Entrenamiento en grupo reducido</h3>
+            <p>Si te gusta entrenar, disfrutar y reír, este es tu servicio. El trabajo en grupo aporta grandes beneficios físicos y mentales. El grupo te motiva a exigirte al máximo en un gran ambiente. Los grupos tienen un aforo máximo de 6 personas. La duración de las sesiones es de 1 hora.</p>
+        </div>
+    </div>
+
+    <div id="contacto" class="tabcontent">
+        <h2>¿Entrenamos?</h2>
+        <form action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <div id="blog" class="tabcontent">
+        <h2>Blog</h2>
+        <p>En nuestro blog tratamos los principales temas del fitness: entrenamiento, alimentación, mitos, dolor, descanso y más. Publicamos al menos una entrada nueva cada semana. ¡Mantente al tanto de nuestras últimas publicaciones!</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Kaizen Fitness Center</p>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Abre la primera pestaña por defecto
+        document.getElementsByClassName("tablink")[0].click();
+    </script>
+</body>
+</html>
